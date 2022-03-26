@@ -7,10 +7,8 @@ import {
 } from 'crypto';
 
 const algorithm: string = 'AES-256-ECB';
-const secretKey: string =
-  process.env.SECRET_KEY || randomBytes(16).toString('hex');
-const ivText: string = process.env.IV_TEXT || 'iv-text';
-const iv: Buffer = Buffer.from(ivText);
+const secretKey: string = randomBytes(16).toString('hex');
+const iv: Buffer = Buffer.from('');
 
 export const encrypt = (text: string): string => {
   const cipher: Cipher = createCipheriv(algorithm, secretKey, iv);
