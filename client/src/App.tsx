@@ -38,8 +38,7 @@ const App: FC = (): JSX.Element => {
         container
         direction="column"
         alignItems="center"
-        justifyContent="center"
-        >
+        justifyContent="center">
         <Grid className="encrypt" item xs={12}>
           <SecretForm updateSecrets={updateSecrets} />
           <SecretsTable secrets={secrets} clearSecrets={clearSecrets} />

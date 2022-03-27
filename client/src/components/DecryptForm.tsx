@@ -8,6 +8,8 @@ interface Props {
   updateDecrypted: (newSecret: Secret) => void;
 }
 
+const API_URL = process.env.REACT_APP_BASE_URL || '';
+
 const DecryptForm = ({ updateDecrypted }: Props): JSX.Element => {
   const [hash, setHash] = useState('');
 
@@ -17,9 +19,8 @@ const DecryptForm = ({ updateDecrypted }: Props): JSX.Element => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/secret/${hash}`);
+      const response = await fetch(`${API_URL}/secret/${hash}`);
       const data = await response.json();
-      console.log(data);
       if (data === 'Secret not found') {
         toast.error('Secret not found');
       } else if (data === 'Secret expired') {

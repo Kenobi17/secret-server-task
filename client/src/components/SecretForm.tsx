@@ -15,6 +15,8 @@ interface Props {
   updateSecrets: (newSecret: Secret) => void;
 }
 
+const API_URL = process.env.REACT_APP_BASE_URL || '';
+
 const SecretForm = ({ updateSecrets }: Props): JSX.Element => {
   const [expireAfter, setExpireAfter] = useState('');
   const [secret, setSecret] = useState('');
@@ -28,7 +30,7 @@ const SecretForm = ({ updateSecrets }: Props): JSX.Element => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch('http://localhost:4000/secret', {
+    const response = await fetch(`${API_URL}/secret`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
