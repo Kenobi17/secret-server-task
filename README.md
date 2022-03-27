@@ -29,7 +29,9 @@ It is totaly OK to ask if something is not clear.
 
 ## API
 
-Set your .env variables or use the default ones.
+1. cd into the api folder
+
+2. Set your .env variables or use the default ones.
 
 ```bash
 PORT=4000
@@ -37,9 +39,11 @@ MONGO_URL=mongodb://localhost:27017
 ORIGIN_URL=http://localhost:3000
 ```
 
-After that, run the followings commands:
+3. After that, run the followings commands:
 
 ```bash
+npm install
+
 npm run build
 
 npm run start
@@ -47,14 +51,22 @@ npm run start
 
 ## Client
 
-The same as you did for the API, set your .env variables or use the default one.
+1. cd into the client folder
+
+
+
+2. The same as you did for the API, set your .env variables or use the default one.
 
 ```bash
 REACT_APP_BASE_URL=http://localhost:4000
 ```
 
-After that, run the next command:
+3. After that, run the next commands:
 
 ```bash
+npm install
+
 npm run start
 ```
+
+## Docker ----- TO DO
