@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: .
+      target: image
+    ports:
+      - 4000:4000
+    volumes: 
+      - .env:/usr/src/app/.env
+  database:
+    image: mongo:5.0.6-focal
+    ports:
+      - 27017:27017
+    volumes:
+      - ./.data/db:/data/db:delegated
