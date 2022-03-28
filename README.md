@@ -53,8 +53,6 @@ npm run start
 
 1. cd into the client folder
 
-
-
 2. The same as you did for the API, set your .env variables or use the default one.
 
 ```bash
@@ -69,4 +67,22 @@ npm install
 npm run start
 ```
 
-## Docker ----- TO DO
+## Docker
+
+### API
+
+To run the API with docker in development mode (with a local MongoDB service) you can use the following command:
+
+```bash
+docker-compose -f docker-compose.dev.yml up -d
+```
+
+To run the "production" version of the API with docker:
+
+```bash
+docker-compose up -d
+```
+
+-- Note: your MONGO_URL .env variable should be set to mongodb://database:27017 so it can connect to the local MongoDB service that comes in the docker-compose files.
+
+### Client - pending...
