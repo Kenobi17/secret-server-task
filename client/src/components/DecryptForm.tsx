@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react';
-import { Button, TextField, Box, MenuItem } from '@mui/material';
+import { Button, TextField, Box } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Secret } from '../interfaces';

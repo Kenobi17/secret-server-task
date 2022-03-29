@@ -85,4 +85,18 @@ docker-compose up -d
 
 -- Note: your MONGO_URL .env variable should be set to mongodb://database:27017 so it can connect to the local MongoDB service that comes in the docker-compose files.
 
-### Client - pending...
+### Client
+
+To run the client with docker in dev mode you can use the following command:
+
+```bash
+docker-compose -f docker-compose.dev.yml up -d
+```
+
+The same goes for "production" mode:
+
+```bash
+docker-compose up -d
+```
+
+-- Note: your REACT_APP_BASE_URL .env variable should be set to http://localhost:4000 so it can connect to the local API, which is running in docker or locally.

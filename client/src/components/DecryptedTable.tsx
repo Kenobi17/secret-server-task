@@ -6,7 +6,6 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Box,
   Button,
 } from '@mui/material';
 import moment from 'moment';
@@ -21,7 +20,6 @@ const DecryptedTable = ({
   decryptedSecrets,
   clearDecryptedSecrets,
 }: Props): JSX.Element => {
-  const never = moment(new Date(0)).format('YYYY-MM-DD');
   return (
     <div className="DecryptedTable">
       <TableContainer component={Paper} sx={{ textAlign: 'center' }}>
